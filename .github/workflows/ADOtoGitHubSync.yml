@@ -13,7 +13,7 @@ jobs:
         AZUSER_EMAIL: ${{secrets.AZUSER_EMAIL}}
         AZORG: ${{secrets.AZORG}}
       run: |
-        cd Deneme-Sync
+        cd $GITHUB_WORKSPACE/Deneme-Sync
         rm -rf .git
         cd ..
         GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/Denemeler/_git/Denemeler"
