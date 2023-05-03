@@ -1,16 +1,18 @@
-name: Run ADO to GitHub Sync with PowerShell
-
-on:
-  workflow_dispatch:
-  
+name: Push directory to another repository
+on: push
 jobs:
-  build:
-    runs-on: windows-2019
+  check-bats-version:
+    runs-on: ubuntu-latest
+    environment: AzurePAT
     steps:
-      - name: Check out repo        
-        uses: actions/checkout@v2
-      - run: |
-          write-host "--------------- Current syncing for repo $($object.AzureRepoName)----------------------------------"
-          .\SynADOtoGitHub.ps1 -GitHubDestinationPAT ${{ secrets.GITHUBDESTINATIONPAT }} -ADOSourcePAT ${{ secrets.ADOSOURCEPAT }} 
-           write-host "---------------------------------------------------------------------------------------------------"
-           
+    - uses: actions/checkout@v2
+    - name: Run script file
+      env:
+        AZUREPAT: ${{secrets.AZUREPAT}}
+        AZUSERNAME: ${{secrets.AZUSERNAME}}
+        AZUSER_EMAIL: ${{secrets.AZUSER_EMAIL}}
+        AZORG: ${{secrets.AZORG}}
+      run: |
+         chmod +x ./commit.sh
+         ./commit.sh
+      shell: bash
