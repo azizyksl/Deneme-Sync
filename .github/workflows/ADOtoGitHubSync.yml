@@ -13,6 +13,16 @@ jobs:
         AZUSER_EMAIL: ${{secrets.AZUSER_EMAIL}}
         AZORG: ${{secrets.AZORG}}
       run: |
-         chmod +x ./commit.sh
-         ./commit.sh
+        cd Deneme-Sync
+        rm -rf .git
+        cd ..
+        GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/Denemeler/_git/Denemeler"
+        git clone $GIT_CMD_REPOSITORY
+        cp -r Deneme-Sync/* Denemeler/
+        cd Denemeler
+        git config --global user.email "$AZUSER_EMAIL"
+        git config --global user.name "$AZUSERNAME"
+        git add .
+        git commit -m "sync from github to azure"
+        git push
       shell: bash
