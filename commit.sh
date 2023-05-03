@@ -11,9 +11,9 @@ cd ..
 GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/Deneme-Sync/_git/Deneme-Sync"
 git clone $GIT_CMD_REPOSITORY
 
-cp -r Deneme-Sync/* Deneme-Sync/
+cp -r Deneme-Sync/* Deneme-Synca/
 
-cd Deneme-Sync
+cd Deneme-Synca
 
 git config --global user.email "$AZUSER_EMAIL"
 git config --global user.name "$AZUSERNAME"
