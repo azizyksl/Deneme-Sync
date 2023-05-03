@@ -16,10 +16,12 @@ jobs:
         cd $GITHUB_WORKSPACE
         rm -rf .git
         cd ..
-        GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/Denemeler/_git/Denemeler"
+        GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/Deneme-Sync/_git/Deneme-Sync"
+        mkdir azureRepo
+        cd azureRepo
         git clone $GIT_CMD_REPOSITORY
-        cp -r Deneme-Sync/* Denemeler/
-        cd Denemeler
+        cp -r $GITHUB_WORKSPACE/* Deneme-Sync/
+        cd Deneme-Sync
         git config --global user.email "$AZUSER_EMAIL"
         git config --global user.name "$AZUSERNAME"
         git add .
