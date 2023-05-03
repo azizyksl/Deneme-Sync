@@ -2,7 +2,7 @@ AZUREPAT=$AZUREPAT
 AZUSERNAME=$AZUSERNAME
 AZUSER_EMAIL=$AZUSER_EMAIL
 AZORG=$AZORG
-git clone https://github.com/azizyksl/Deneme-Sync.git
+git clone https://github.com/azizyksl/Deneme-Sync
 cd Deneme-Sync
 rm -rf .git
 
