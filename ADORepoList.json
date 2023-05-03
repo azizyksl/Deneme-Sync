@@ -1,14 +1,9 @@
 {
     "RepoList" : [
     {
-        "AzureRepoName":"Docker",
-        "ADOCloneURL":"dev.azure.com/CloudQuickLabs/DockerImageAzureWebApp/_git/Docker",
-         "GitHubCloneURL":"github.com/RekhuGopal/Docker.git"
-    },
-    {
-        "AzureRepoName":"CloudQuickLabsADO",
-        "ADOCloneURL":"dev.azure.com/CloudQuickLabs/CloudQuickLabsADO/_git/CloudQuickLabsADO",
-         "GitHubCloneURL":"github.com/RekhuGopal/CloudQuickLabsADO.git"
+        "AzureRepoName":"Deneme-Sync",
+        "ADOCloneURL":"https://azizyuksel@dev.azure.com/azizyuksel/Deneme-Sync/_git/Deneme-Sync",
+         "GitHubCloneURL":"https://github.com/azizyksl/Deneme-Sync.git"
     }
     ]
 }
