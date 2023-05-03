@@ -1,9 +1,0 @@
-{
-    "RepoList" : [
-    {
-        "AzureRepoName":"Deneme-Sync",
-        "ADOCloneURL":"https://azizyuksel@dev.azure.com/azizyuksel/Deneme-Sync/_git/Deneme-Sync",
-         "GitHubCloneURL":"https://github.com/azizyksl/Deneme-Sync.git"
-    }
-    ]
-}
