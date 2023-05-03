@@ -8,12 +8,12 @@ rm -rf .git
 
 cd ..
 
-GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/TestGitSync/_git/TestGitSync"
+GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/Deneme-Sync/_git/Deneme-Sync"
 git clone $GIT_CMD_REPOSITORY
 
-cp -r testAzureDevops/* TestGitSync/
+cp -r testAzureDevops/* Deneme-Sync/
 
-cd TestGitSync
+cd Deneme-Sync
 
 git config --global user.email "$AZUSER_EMAIL"
 git config --global user.name "$AZUSERNAME"
